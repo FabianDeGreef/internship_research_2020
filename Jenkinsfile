@@ -8,33 +8,42 @@ pipeline {
     stages {
         stage('pre-build') {
             steps {
+                echo 'Pre-building'
                 sh 'node --version'
+                sh 'npm install'
             }
         }
 
         stage('build') {
             steps {
-                sh 'node --version'
-
+                echo 'Building project'
+                sh 'ng build'
             }
         }
 
-        stage ('Deploy develop') {
+        stage('testing') {
+            steps {
+                echo 'Running all tests'
+            }
+        }
+
+        stage ('deployment develop') {
             when {
                 branch 'develop'
             }
             steps {
-                sh 'node --version'
-
+                echo "Preparing $BRANCH_NAME for deployment";
+                sh 'git push -f https://heroku:530a61c5-94e3-4d8a-b7be-31b4800710f5@git.heroku.com/ion-research-dev-2020.git HEAD:master'
             }
         }
 
-        stage ('Deploy release') {
+        stage ('deployment release') {
             when {
                 branch 'release'
             }
             steps {
-                sh 'node --version'
+                echo "Preparing $BRANCH_NAME for deployment";
+                sh 'git push -f https://heroku:530a61c5-94e3-4d8a-b7be-31b4800710f5@git.heroku.com/ion-research-release-2020.git HEAD:master'
             }
         }
     }
