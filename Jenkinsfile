@@ -10,6 +10,7 @@ pipeline {
             steps {
                 echo 'Pre-building'
                 sh 'node --version'
+                sh 'npm install -g angular-cli'
                 sh 'npm install'
             }
         }
