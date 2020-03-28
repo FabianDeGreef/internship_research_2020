@@ -14,6 +14,7 @@ pipeline {
 
         stage('build') {
             steps {
+                sh 'node --version'
 
             }
         }
@@ -23,6 +24,7 @@ pipeline {
                 branch 'develop'
             }
             steps {
+                sh 'node --version'
 
             }
         }
@@ -32,7 +34,7 @@ pipeline {
                 branch 'release'
             }
             steps {
-                
+                sh 'node --version'
             }
         }
     }
