@@ -4,7 +4,10 @@ pipeline {
     stage('pre-build') {
       steps {
         echo 'Pre-building'
+        sh 'node --version'
+        sh 'npm install npm-force-resolutions --save-dev'
         sh 'npm install'
+        sh 'npx npm-force-resolutions'
       }
     }
     stage('build') {
