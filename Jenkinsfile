@@ -4,7 +4,6 @@ pipeline {
     stage('pre-build') {
       steps {
         echo 'Pre-building'
-        sh 'node --version'
         sh 'npm install'
       }
     }
