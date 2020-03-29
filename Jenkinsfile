@@ -12,8 +12,8 @@ pipeline {
     stage('build') {
       steps {
         echo 'Building project'
-        sh 'ng build --prod'
-        }
+        sh 'npm run-script build'
+      }
     }
     stage('testing') {
       steps {
