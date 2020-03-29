@@ -17,7 +17,7 @@ pipeline {
     stage('build') {
       steps {
         echo 'Building project'
-        sh 'npm run ng -- build '
+        sh 'npm run-script build'
       }
     }
 
@@ -33,7 +33,7 @@ pipeline {
       }
       steps {
         echo "Preparing $BRANCH_NAME for deployment"
-        sh 'git push -f https://heroku:530a61c5-94e3-4d8a-b7be-31b4800710f5@git.heroku.com/ion-research-dev-2020.git HEAD:master'
+        sh 'git push -f https://heroku:$HEROKU_KEY@git.heroku.com/ion-research-dev-2020.git HEAD:master'
       }
     }
 
@@ -43,7 +43,7 @@ pipeline {
       }
       steps {
         echo "Preparing $BRANCH_NAME for deployment"
-        sh 'git push -f https://heroku:530a61c5-94e3-4d8a-b7be-31b4800710f5@git.heroku.com/ion-research-release-2020.git HEAD:master'
+        sh 'git push -f https://heroku:$HEROKU_KEY@git.heroku.com/ion-research-release-2020.git HEAD:master'
       }
     }
 
