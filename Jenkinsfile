@@ -5,16 +5,15 @@ pipeline {
       steps {
         echo 'Pre-building'
         sh 'node --version'
-        sh 'npm install npm-force-resolutions --save-dev'
-        sh 'npm install'
         sh 'npx npm-force-resolutions'
+        sh 'npm install'
       }
     }
     stage('build') {
       steps {
         echo 'Building project'
-        sh 'npm run-script build'
-      }
+        sh 'ng build --prod'
+        }
     }
     stage('testing') {
       steps {
