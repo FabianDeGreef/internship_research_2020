@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'node:7-alpine'
+      image 'node:latest-alpine'
     }
 
   }
@@ -17,7 +17,7 @@ pipeline {
     stage('build') {
       steps {
         echo 'Building project'
-        sh 'npm run ng -- build '
+        sh 'npm run ng -- buildÂ '
       }
     }
 
