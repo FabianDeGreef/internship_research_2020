@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'node:12.16.1-alpine'
-    }
-
-  }
+  agent { docker { image 'node:12.16.1' } }
   stages {
     stage('pre-build') {
       steps {
@@ -13,20 +8,17 @@ pipeline {
         sh 'npm install'
       }
     }
-
     stage('build') {
       steps {
         echo 'Building project'
         sh 'npm run-script build'
       }
     }
-
     stage('testing') {
       steps {
         echo 'Running all tests'
       }
     }
-
     stage('deployment develop') {
       when {
         branch 'develop'
@@ -36,7 +28,6 @@ pipeline {
         sh 'git push -f https://heroku:$HEROKU_KEY@git.heroku.com/ion-research-dev-2020.git HEAD:master'
       }
     }
-
     stage('deployment release') {
       when {
         branch 'release'
@@ -46,7 +37,6 @@ pipeline {
         sh 'git push -f https://heroku:$HEROKU_KEY@git.heroku.com/ion-research-release-2020.git HEAD:master'
       }
     }
-
   }
   environment {
     CI = 'true'
