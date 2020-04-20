@@ -13,7 +13,6 @@ pipeline {
       steps {
         echo 'Pre-building'
         sh 'node --version'
-        sh 'npx npm-force-resolutions'
         sh 'npm install'
       }
     }
