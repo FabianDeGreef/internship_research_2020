@@ -1,5 +1,13 @@
 pipeline {
-  agent { docker { image 'node:12.16.1' } }
+  agent {
+        docker {
+            image 'node:6-alpine'
+            args '-p 3000:3000 -p 5000:5000' 
+        }
+    }
+    environment {
+        CI = 'true'
+    }
   stages {
     stage('pre-build') {
       steps {
@@ -38,8 +46,5 @@ pipeline {
         sh 'git push -f https://heroku:$HEROKU_KEY@git.heroku.com/ion-research-release-2020.git HEAD:master'
       }
     }
-  }
-  environment {
-    CI = 'true'
   }
 }
