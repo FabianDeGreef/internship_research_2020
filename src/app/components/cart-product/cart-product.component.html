@@ -1,0 +1,22 @@
+<ion-card>
+  <img [src]="product.imageUrl" />
+  <ion-card-header>
+    <ion-card-subtitle>ID: {{ product.id }}</ion-card-subtitle>
+    <ion-card-title>Name: {{ product.name }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content> Description: {{ product.description }} </ion-card-content>
+  <ion-card-content>
+    <div>Price: €{{ product.price }}</div>
+    <div>Amount: {{ product.quantity }}</div>
+    <div class="buttonContainer">
+      <ion-button (click)="onDelete(product)" color="danger">Delete</ion-button>
+      <ion-button
+        color="primary"
+        routerLink="/menu/home/tabMain/details"
+        routerDirection="forward"
+      >
+        Details</ion-button
+      >
+    </div>
+  </ion-card-content>
+</ion-card>

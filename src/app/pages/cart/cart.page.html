@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultref=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cart</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <app-cart-product
+      (deletedProduct)="onDelete()"
+      *ngFor="let product of products"
+      [product]="product"
+    ></app-cart-product>
+  </div>
+</ion-content>

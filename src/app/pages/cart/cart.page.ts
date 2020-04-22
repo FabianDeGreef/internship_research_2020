@@ -1,15 +1,32 @@
-import { Component, OnInit } from '@angular/core';
+import { CartService } from "./../../services/cart.service";
+import { Component, OnInit } from "@angular/core";
+import { Product } from "../../models/product";
+import { ProductService } from "../../services/product.service";
 
 @Component({
-  selector: 'app-cart',
-  templateUrl: './cart.page.html',
-  styleUrls: ['./cart.page.scss'],
+  selector: "app-cart",
+  templateUrl: "./cart.page.html",
+  styleUrls: ["./cart.page.scss"],
 })
 export class CartPage implements OnInit {
+  products: Product[];
 
-  constructor() { }
+  constructor(private cartService: CartService) {}
 
-  ngOnInit() {
+  fetchList() {
+    this.cartService.getProducts().subscribe((data) => {
+      this.products = data;
+    });
+  }
+  onDelete() {
+    this.fetchList();
   }
 
+  ngOnInit() {
+    this.fetchList();
+  }
+
+  ionViewWillEnter() {
+    this.fetchList();
+  }
 }
