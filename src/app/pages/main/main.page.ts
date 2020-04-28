@@ -5,6 +5,7 @@ import { Component, OnInit } from "@angular/core";
 import { Product } from "../../models/product";
 import { ProductService } from "../../services/product.service";
 import { ToastController } from "@ionic/angular";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-main",
@@ -19,7 +20,8 @@ export class MainPage implements OnInit {
     private cartService: CartService,
     private checkCartItemService: CheckCartItemService,
     private notifyService: NotifyService,
-    public toastController: ToastController
+    public toastController: ToastController,
+    private router: Router
   ) {}
 
   async presentToast(message) {
@@ -37,6 +39,9 @@ export class MainPage implements OnInit {
     });
   }
 
+  onDetails(product: Product) {
+    this.router.navigate(["/menu/home/tabMain/details/" + product.id]);
+  }
   onAdd(product: Product) {
     if (this.checkCartItemService.checkProduct(product)) {
       this.presentToast("Item is already inside your cart");

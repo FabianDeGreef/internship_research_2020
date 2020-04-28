@@ -12,6 +12,7 @@
     <app-product
       *ngFor="let product of products"
       (addProduct)="onAdd(product)"
+      (detailsProduct)="onDetails(product)"
       [product]="product"
     >
     </app-product>

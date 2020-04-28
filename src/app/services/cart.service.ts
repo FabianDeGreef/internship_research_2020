@@ -19,8 +19,8 @@ export class CartService {
     );
   }
 
-  getProductById(id): Observable<Product[]> {
-    return this.http.get<Product[]>(`${this.url}/${id}`).pipe(
+  getProductById(id): Observable<Product> {
+    return this.http.get<Product>(`${this.url}/${id}`).pipe(
       tap((obj) => console.log("fetched cart product")),
       catchError(this.handleError)
     );

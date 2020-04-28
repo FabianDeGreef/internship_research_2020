@@ -1,3 +1,4 @@
+import { ProductResolverService } from "./../../resolvers/product-resolver.service";
 import { AppComponent } from "./../../app.component";
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
@@ -29,7 +30,10 @@ const routes: Routes = [
           import("../deals/deals.module").then((m) => m.DealsPageModule),
       },
       {
-        path: "tabMain/details",
+        path: "tabMain/details/:id",
+        resolve: {
+          product: ProductResolverService,
+        },
         loadChildren: () =>
           import("../details/details.module").then((m) => m.DetailsPageModule),
       },

@@ -8,7 +8,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./home.page.scss"],
 })
 export class HomePage implements OnInit {
-  cartCount;
+  cartCount: Number;
 
   constructor(
     private cartService: CartService,

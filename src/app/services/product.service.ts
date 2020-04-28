@@ -19,6 +19,12 @@ export class ProductService {
     );
   }
 
+  getProductById(id): Observable<Product> {
+    return this.http
+      .get<Product>(`${this.url}/${id}`)
+      .pipe(tap(() => catchError(this.handleError)));
+  }
+
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       console.error("An error occurred: ", error.error.message);
