@@ -13,10 +13,7 @@ export class CartProductComponent implements OnInit {
   @Output() deletedProduct: EventEmitter<any> = new EventEmitter();
 
   onDelete(product: Product) {
-    this.cartService.removeProduct(product).subscribe((data) => {
-      console.log("product deleted from the cart");
-      this.deletedProduct.emit();
-    });
+    this.deletedProduct.emit(product);
   }
 
   constructor(private cartService: CartService) {}

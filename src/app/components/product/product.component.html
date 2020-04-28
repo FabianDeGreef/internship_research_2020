@@ -9,11 +9,14 @@
     <div>Price: €{{ product.price }}</div>
     <div>Quantity: {{ product.quantity }}</div>
     <div class="buttonContainer">
-      <ion-button (click)="onBuy(product)" color="primary">Buy Now</ion-button>
+      <ion-button (click)="onBuy(product)" color="primary"
+        >Add to cart</ion-button
+      >
       <ion-button
         color="primary"
         routerLink="/menu/home/tabMain/details"
         routerDirection="forward"
+        (click)="onDetails(product)"
       >
         Details</ion-button
       >

@@ -33,6 +33,15 @@ server.post("/products/", function (req, res, next) {
   }
 });
 
+server.post("/cart/", function (req, res, next) {
+  const error = validateCartItem(req.body);
+  if (error) {
+    res.status(400).send(error);
+  } else {
+    next();
+  }
+});
+
 server.use(router);
 
 const port = 3000;
@@ -40,7 +49,13 @@ server.listen(port, () => {
   console.log(`JSON Server is running on port ${port}`);
 });
 
-function validateProduct(course) {
+function validateProduct(product) {
+  if (!product.name) return "Name is required.";
+  if (!product.price) return "Price is required.";
+  return "";
+}
+
+function validateCartItem(product) {
   if (!product.name) return "Name is required.";
   if (!product.price) return "Price is required.";
   return "";

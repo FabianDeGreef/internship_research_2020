@@ -1,6 +1,7 @@
+import { NotifyService } from "./../../services/notify.service";
 import { CartService } from "./../../services/cart.service";
 import { Product } from "./../../models/product";
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, EventEmitter, Output } from "@angular/core";
 import { Router } from "@angular/router";
 
 @Component({
@@ -10,30 +11,18 @@ import { Router } from "@angular/router";
 })
 export class ProductComponent implements OnInit {
   @Input() product: Product;
-  cartData: Product[];
-  duplicateItem: Product = null;
+  @Output() addProduct: EventEmitter<Product> = new EventEmitter();
+  @Output() detailsProduct: EventEmitter<Product> = new EventEmitter();
 
   onBuy(product: Product) {
-    this.cartData.map((item) => {
-      if (product.id === item.id) {
-        this.duplicateItem = product;
-      }
-    });
-
-    if (!this.duplicateItem) {
-      let cartProduct = Object.assign({}, product);
-      this.cartService.addProduct(product).subscribe((data) => {
-        console.log("product added to the cart");
-      });
-      this.cartData.push(cartProduct);
-    }
+    this.addProduct.emit(product);
   }
 
-  constructor(private cartService: CartService) {}
-
-  ngOnInit() {
-    this.cartService.getProducts().subscribe((data) => {
-      this.cartData = data;
-    });
+  onDetails(product: Product) {
+    this.detailsProduct.emit(product);
   }
+
+  constructor() {}
+
+  ngOnInit() {}
 }
