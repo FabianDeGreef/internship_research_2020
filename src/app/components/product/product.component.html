@@ -1,13 +1,11 @@
 <ion-card>
   <img [src]="product.imageUrl" />
   <ion-card-header>
-    <ion-card-subtitle>ID: {{ product.id }}</ion-card-subtitle>
     <ion-card-title>Name: {{ product.name }}</ion-card-title>
   </ion-card-header>
   <ion-card-content> Description: {{ product.description }} </ion-card-content>
   <ion-card-content>
     <div>Price: €{{ product.price }}</div>
-    <div>Quantity: {{ product.quantity }}</div>
     <div class="buttonContainer">
       <ion-button (click)="onBuy(product)" color="primary"
         >Add to cart</ion-button

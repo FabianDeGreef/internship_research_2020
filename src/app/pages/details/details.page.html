@@ -1,8 +1,83 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-    <ion-back-button defaultref=""></ion-back-button>
+      <ion-back-button defaultref=""></ion-back-button>
     </ion-buttons>
-    <ion-title>details</ion-title>
+    <ion-title>Details</ion-title>
   </ion-toolbar>
 </ion-header>
+
+<ion-content>
+  <ion-card class="root">
+    <img class="image" [src]="product.imageUrl" />
+    <ion-card-header>
+      <ion-card-subtitle>{{ product.description }}</ion-card-subtitle>
+      <ion-card-title class="title">{{ product.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{ product.longDescription }}
+    </ion-card-content>
+    <ion-card-content>
+      <ion-label class="titleExtra">Extra Details:</ion-label>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-label class="subTile">Quantity:</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label class="subTile">{{ product.quantity }}</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label class="subTile">Color: </ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label class="subTile">Color: {{product.color}}</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label class="subTile">Material:</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label class="subTile"
+              >Material: {{product.material}}</ion-label
+            >
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+    <ion-card-content>
+      <ion-label class="titleExtra">Price:</ion-label>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-label class="subPrice">VATS:</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label class="subPrice">21%</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label class="subPrice">Price Inc VATS:</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label class="subPrice">€{{ product.price }}</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label class="price">Total Price: </ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label class="price"
+              >€{{calculatePrice(product.price)}}</ion-label
+            >
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

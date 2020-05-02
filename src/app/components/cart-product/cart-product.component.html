@@ -1,13 +1,13 @@
-<ion-card>
+<ion-card class="card">
   <img [src]="product.imageUrl" />
   <ion-card-header>
-    <ion-card-subtitle>ID: {{ product.id }}</ion-card-subtitle>
     <ion-card-title>Name: {{ product.name }}</ion-card-title>
   </ion-card-header>
-  <ion-card-content> Description: {{ product.description }} </ion-card-content>
+  <ion-card-content class="text-content">
+    Description: {{ product.description }}
+  </ion-card-content>
   <ion-card-content>
     <div>Price: €{{ product.price }}</div>
-    <div>Amount: {{ product.quantity }}</div>
     <div class="buttonContainer">
       <ion-button (click)="onDelete(product)" color="danger">Delete</ion-button>
       <ion-button
