@@ -9,4 +9,5 @@ export interface Product {
   dealPrice: string;
   imageUrl: string;
   quantity: number;
+  inCart: boolean;
 }

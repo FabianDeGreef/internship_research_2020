@@ -1,5 +1,75 @@
 {
-  "cart": [],
+  "cart": [
+    {
+      "id": 47,
+      "name": "Intelligent Soft Bacon",
+      "description": "Quia soluta atque aspernatur possimus earum ex praesentium. Aut corporis veritatis ut. Dolor mollitia veniam minima. Facere aut aperiam. Sed libero et eos autem. Ipsa dolor optio sed quia sequi.",
+      "longDescription": "Quas in velit reiciendis magni et temporibus est. Qui dolorem incidunt et sint. Cum placeat fugiat consequatur eligendi amet placeat a rerum autem. Porro eaque dolor hic expedita voluptas voluptas provident ipsa.\n \rTotam odit ducimus est aliquam neque. Dolorem culpa culpa rerum adipisci et temporibus ea. Qui eius repellat quod dolores aut id distinctio provident magni. Dolorum sed doloribus rerum dignissimos excepturi et.\n \rEum dignissimos vitae facilis sit autem molestiae occaecati non. Ipsam et ab. Alias dolorem hic reiciendis et amet veritatis doloribus. Recusandae nemo in dolore voluptatem tempore doloribus distinctio aut.",
+      "color": "plum",
+      "material": "Steel",
+      "price": "593.00",
+      "dealPrice": "480.00",
+      "imageUrl": "https://source.unsplash.com/1600x900/?product&sig=47",
+      "quantity": 53852,
+      "inCart": true,
+      "createdAt": 1588517949006
+    },
+    {
+      "id": 35,
+      "name": "Small Fresh Fish",
+      "description": "Itaque nostrum aut delectus non dolorem ut. Dolores ad voluptatem esse. Ut cumque odio.",
+      "longDescription": "Libero nostrum dolore. Voluptates iusto ut consequatur aut nisi at beatae. Aut aut illum pariatur est deleniti rem eum. Cupiditate perspiciatis laudantium.\n \rSed vero voluptatibus soluta voluptas voluptate autem doloremque quasi quasi. Est dolor mollitia totam eveniet ratione minus assumenda voluptate. Eligendi dolor quia omnis architecto impedit delectus sed neque. Autem modi enim autem. Maxime illum labore unde et nisi est placeat eos iure.\n \rEt quod qui eum. Voluptas ullam aut ex dolores odio maiores. Distinctio sint atque delectus adipisci aut nam.",
+      "color": "purple",
+      "material": "Cotton",
+      "price": "182.00",
+      "dealPrice": "99.90",
+      "imageUrl": "https://source.unsplash.com/1600x900/?product&sig=35",
+      "quantity": 86506,
+      "inCart": true,
+      "createdAt": 1588517952610
+    },
+    {
+      "id": 5,
+      "name": "Sleek Plastic Salad",
+      "description": "In architecto sit eos qui quo et quibusdam. Ut corporis et ratione et. Consequatur unde eveniet autem. Possimus laborum aliquam dolore dolorum ipsam sunt vero.",
+      "longDescription": "Dolor optio consequuntur. Est eaque inventore id reiciendis consequatur quo sint nemo. Ut corporis ipsum vel et velit est voluptatem velit est. Dolor sed tenetur iure sint ut voluptatibus nulla eos omnis. Animi fuga tenetur ut ipsum nihil. Voluptas similique sit dolore nemo et deleniti magnam.\n \rLibero expedita illum suscipit accusantium illum aspernatur. Et autem dolore consequuntur odio alias et nihil. Natus consequatur minus enim quibusdam assumenda. Autem omnis consequatur eius.\n \rVel vero non velit ex. Eum accusantium blanditiis eaque quam atque voluptas suscipit voluptas est. Qui est blanditiis blanditiis quod velit fugit. Voluptatem rem veritatis magni. Sunt ut deleniti officia et cupiditate reprehenderit est harum. Harum doloremque reprehenderit asperiores sunt rem ex qui quis.",
+      "color": "red",
+      "material": "Concrete",
+      "price": "500.00",
+      "dealPrice": "420.23",
+      "imageUrl": "https://source.unsplash.com/1600x900/?product&sig=5",
+      "quantity": 13946,
+      "inCart": true,
+      "createdAt": 1588517992065
+    },
+    {
+      "id": 6,
+      "name": "Licensed Steel Bacon",
+      "description": "Sed ut dolore. Omnis non distinctio nihil in et quod. Dolores illum omnis impedit corporis aut optio veniam. Iusto amet dolor dolorum voluptates qui accusantium ut.",
+      "longDescription": "Sunt nostrum voluptas exercitationem. Ut delectus quisquam laudantium nulla error dolorem. Porro autem reprehenderit ea velit aut a. Aliquid necessitatibus est vitae magni.\n \rTenetur temporibus accusamus minima mollitia temporibus ipsum non. Omnis vitae vitae dolore similique. Et aspernatur aut et. Ea rerum aut itaque consequatur voluptatem animi deleniti distinctio. Vero distinctio eos non repellat magnam inventore placeat. Tempore eveniet consequatur id quo et eos.\n \rEius mollitia consequatur ducimus aliquam consectetur dolores nesciunt ut nam. Quod eum dolorum odio non accusantium debitis eveniet ex. Labore consectetur et ex. Cum repellat et.",
+      "color": "indigo",
+      "material": "Steel",
+      "price": "873.00",
+      "dealPrice": "798.23",
+      "imageUrl": "https://source.unsplash.com/1600x900/?product&sig=6",
+      "quantity": 11065,
+      "inCart": true,
+      "createdAt": 1588518004096
+    },
+    {
+      "id": 1,
+      "name": "Tasty Concrete Mouse",
+      "description": "Repellat et quaerat ratione molestiae aut maxime omnis modi. Labore ut magnam ut qui. Nihil expedita quasi culpa voluptas modi est accusantium voluptatem. Sapiente nostrum sint aut. Amet ut at. Veritatis sunt est explicabo et aliquid dolores impedit.",
+      "longDescription": "Cupiditate et voluptatum asperiores eos consequatur quis qui. Tempore et voluptate aliquid placeat. Qui unde qui soluta ut ut. Laudantium repellat ipsam molestiae sunt molestiae dolorum est iure.\n \rOfficia ipsam ipsam cumque. Rem sapiente qui. At voluptatem dolores. Esse omnis quam nam deserunt voluptatem accusamus aspernatur.\n \rRerum mollitia exercitationem qui qui. Fugit voluptas ducimus. Et inventore enim aut esse.",
+      "color": "fuchsia",
+      "material": "Plastic",
+      "price": "216.00",
+      "imageUrl": "https://source.unsplash.com/1600x900/?product&sig=1",
+      "quantity": 8208,
+      "inCart": true,
+      "createdAt": 1588518013517
+    }
+  ],
   "products": [
     {
       "id": 1,
@@ -65,6 +135,7 @@
       "color": "indigo",
       "material": "Steel",
       "price": "873.00",
+      "dealPrice": "798.23",
       "imageUrl": "https://source.unsplash.com/1600x900/?product&sig=6",
       "quantity": 11065
     },
@@ -175,6 +246,7 @@
       "color": "tan",
       "material": "Steel",
       "price": "251.00",
+      "dealPrice": "182.21",
       "imageUrl": "https://source.unsplash.com/1600x900/?product&sig=16",
       "quantity": 65658
     },
@@ -274,6 +346,7 @@
       "color": "azure",
       "material": "Cotton",
       "price": "749.00",
+      "dealPrice": "699.99",
       "imageUrl": "https://source.unsplash.com/1600x900/?product&sig=25",
       "quantity": 82677
     },
@@ -384,6 +457,7 @@
       "color": "purple",
       "material": "Cotton",
       "price": "182.00",
+      "dealPrice": "99.90",
       "imageUrl": "https://source.unsplash.com/1600x900/?product&sig=35",
       "quantity": 86506
     },
@@ -516,6 +590,7 @@
       "color": "plum",
       "material": "Steel",
       "price": "593.00",
+      "dealPrice": "480.00",
       "imageUrl": "https://source.unsplash.com/1600x900/?product&sig=47",
       "quantity": 53852
     },

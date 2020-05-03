@@ -13,6 +13,7 @@ import { ProductService } from "../../services/product.service";
 })
 export class CartPage implements OnInit {
   products: Product[];
+  totalPrice = 0;
 
   constructor(
     private cartService: CartService,
@@ -24,6 +25,7 @@ export class CartPage implements OnInit {
   fetchList() {
     this.cartService.getProducts().subscribe((data) => {
       this.products = data;
+      this.calculateTotalPrice();
     });
   }
   onDelete(product: Product) {
@@ -37,6 +39,22 @@ export class CartPage implements OnInit {
 
   onDetails(product: Product) {
     this.router.navigate(["/menu/home/tabMain/details/" + product.id]);
+  }
+
+  calculateTotalPrice() {
+    this.totalPrice = 0;
+    this.products.forEach((product) => {
+      let value = parseFloat(
+        product.dealPrice ? product.dealPrice : product.price
+      );
+      this.totalPrice = this.totalPrice + value;
+    });
+  }
+
+  checkout() {
+    this.products.forEach((product) => {
+      this.onDelete(product);
+    });
   }
 
   ngOnInit() {

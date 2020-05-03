@@ -8,7 +8,7 @@ import { Product } from "../models/product";
   providedIn: "root",
 })
 export class CartService {
-  url: string = "http://localhost:3000/cart";
+  url: string = "http://192.168.1.113:3000/cart";
 
   constructor(private http: HttpClient) {}
 
@@ -27,7 +27,9 @@ export class CartService {
   }
 
   addProduct(product: Product): Observable<Product> {
-    return this.http.post<Product>(this.url, product).pipe(
+    let productToAdd = JSON.parse(JSON.stringify(product));
+    productToAdd.inCart = true;
+    return this.http.post<Product>(this.url, productToAdd).pipe(
       tap((obj) => console.log("added cart product")),
       catchError(this.handleError)
     );

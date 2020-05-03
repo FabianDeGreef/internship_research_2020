@@ -5,15 +5,30 @@
   </ion-card-header>
   <ion-card-content> Description: {{ product.description }} </ion-card-content>
   <ion-card-content>
-    <div class="price" [class.oldPrice]="product.dealPrice !== undefined">
-      Price: €{{ product.price }}
-    </div>
-    <div class="newPrice" *ngIf="product.dealPrice !== undefined">
-      Deal Price: €{{ product.dealPrice }}
-    </div>
+    <ion-grid>
+      <ion-row>
+        <div class="price">Price:</div>
+        <div class="price" [class.oldPrice]="product.dealPrice !== undefined">
+          € {{ product.price }}
+        </div>
+        <div class="newPrice" *ngIf="product.dealPrice !== undefined">
+          € {{ product.dealPrice }}
+        </div>
+      </ion-row>
+    </ion-grid>
 
     <div class="buttonContainer">
-      <ion-button (click)="onBuy(product)" color="primary"
+      <ion-button
+        *ngIf="product.inCart"
+        (click)="onDelete(product)"
+        color="danger"
+        >Delete</ion-button
+      >
+
+      <ion-button
+        *ngIf="!product.inCart"
+        (click)="onBuy(product)"
+        color="primary"
         >Add to cart</ion-button
       >
       <ion-button

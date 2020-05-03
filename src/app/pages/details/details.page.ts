@@ -11,11 +11,15 @@ import { Location } from "@angular/common";
 })
 export class DetailsPage implements OnInit {
   product: Product;
-  totalPrice: number;
+  totalPrice: Number;
+  priceVats: Number = 0;
+  discount: Number = 0;
 
   calculatePrice(price: string) {
     let value = parseFloat(price);
-    return value * 1.21;
+    this.priceVats = value * 0.21;
+    this.discount = value - parseFloat(this.product.dealPrice);
+    return value - value * 0.21;
   }
   previous() {
     this._location.back();

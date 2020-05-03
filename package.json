@@ -13,7 +13,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "generateData": "node ./api/generateData.js > ./api/data.json",
-    "runServer": "json-server --host 192.168.1.111 ./api/data.json"
+    "runServer": "json-server --host 192.168.1.113 ./api/data.json"
   },
   "private": true,
   "dependencies": {

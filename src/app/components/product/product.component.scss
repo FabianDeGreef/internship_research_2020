@@ -10,6 +10,17 @@
   margin-left: auto;
   margin-right: auto;
 }
+.buttonContainer {
+  margin: 10px;
+}
+.button {
+  font-size: 20px;
+}
+ion-content {
+  ion-col {
+    display: flex;
+  }
+}
 ion-card {
   img {
     width: 100%;
@@ -17,20 +28,28 @@ ion-card {
     margin-left: auto;
     margin-right: auto;
   }
+  ion-card-content {
+    padding: 5 !important;
+    min-height: 90px;
+    ion-card-title {
+      padding-top: 1.5rem !important;
+      padding-bottom: 1.5rem !important;
+    }
+  }
 }
 
 .oldPrice {
   text-decoration: line-through;
-  color: red;
   font-size: 17px;
 }
 
 .newPrice {
-  color: green;
+  margin-left: 10px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .price {
   font-size: 17px;
+  margin-left: 5px;
 }

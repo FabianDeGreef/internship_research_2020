@@ -27,9 +27,9 @@ export class DealsPage implements OnInit {
   async presentToast(message) {
     const toast = await this.toastController.create({
       message: message,
-      duration: 1000,
+      duration: 500,
       color: "primary",
-      position: "bottom",
+      position: "middle",
     });
     toast.present();
   }

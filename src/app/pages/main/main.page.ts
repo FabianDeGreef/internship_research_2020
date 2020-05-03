@@ -27,8 +27,9 @@ export class MainPage implements OnInit {
   async presentToast(message) {
     const toast = await this.toastController.create({
       message: message,
-      duration: 1000,
+      duration: 500,
       color: "primary",
+      position: "middle",
     });
     toast.present();
   }

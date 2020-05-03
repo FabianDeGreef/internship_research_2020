@@ -55,37 +55,56 @@
       <ion-grid>
         <ion-row>
           <ion-col>
-            <ion-label class="subPrice">VATS:</ion-label>
-          </ion-col>
-          <ion-col>
-            <ion-label class="subPrice">21%</ion-label>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>
-            <ion-label class="subPrice">Price Inc VATS:</ion-label>
+            <ion-label class="subPrice">Price ex VATS:</ion-label>
           </ion-col>
           <ion-col>
             <ion-label
-              class="price"
+              class="subPrice"
               [class.oldPrice]="product.dealPrice !== undefined"
             >
-              €{{ product.price }}</ion-label
-            >
-            <ion-label class="newPrice" *ngIf="product.dealPrice !== undefined">
-              €{{ product.dealPrice }}</ion-label
+              € {{( calculatePrice(product.price))| number : '1.2-2'
+              }}</ion-label
             >
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
-            <ion-label class="price">Total Price: </ion-label>
+            <ion-label class="subPrice">VATS: 21%</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label class="subPrice"
+              >€ {{priceVats| number : '1.2-2' }}</ion-label
+            >
+          </ion-col>
+        </ion-row>
+        <ion-row *ngIf="product.dealPrice !== undefined">
+          <ion-col>
+            <ion-label class="subPrice">Old price (inc VATS)</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label class="subPrice"
+              >€ {{product.price| number : '1.2-2' }}</ion-label
+            >
+          </ion-col>
+        </ion-row>
+        <ion-row *ngIf="product.dealPrice !== undefined">
+          <ion-col>
+            <ion-label class="subPrice">Product Discount</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label class="subPrice"
+              >€ {{discount| number : '1.2-2' }}</ion-label
+            >
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label class="price">Price inc VATS: </ion-label>
           </ion-col>
           <ion-col>
             <ion-label class="price"
-              >€{{(product.dealPrice!==undefined ?
-              calculatePrice(product.dealPrice) :
-              calculatePrice(product.price))| number : '1.2-2' }}</ion-label
+              >€ {{(product.dealPrice!==undefined ? product.dealPrice :
+              product.price)| number : '1.2-2' }}</ion-label
             >
           </ion-col>
         </ion-row>
