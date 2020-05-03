@@ -1,7 +1,9 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-back-button defaultref=""></ion-back-button>
+      <ion-button (click)="previous()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
     </ion-buttons>
     <ion-title>Details</ion-title>
   </ion-toolbar>
@@ -64,7 +66,15 @@
             <ion-label class="subPrice">Price Inc VATS:</ion-label>
           </ion-col>
           <ion-col>
-            <ion-label class="subPrice">€{{ product.price }}</ion-label>
+            <ion-label
+              class="price"
+              [class.oldPrice]="product.dealPrice !== undefined"
+            >
+              €{{ product.price }}</ion-label
+            >
+            <ion-label class="newPrice" *ngIf="product.dealPrice !== undefined">
+              €{{ product.dealPrice }}</ion-label
+            >
           </ion-col>
         </ion-row>
         <ion-row>
@@ -73,7 +83,9 @@
           </ion-col>
           <ion-col>
             <ion-label class="price"
-              >€{{calculatePrice(product.price)}}</ion-label
+              >€{{(product.dealPrice!==undefined ?
+              calculatePrice(product.dealPrice) :
+              calculatePrice(product.price))| number : '1.2-2' }}</ion-label
             >
           </ion-col>
         </ion-row>

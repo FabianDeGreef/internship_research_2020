@@ -1,13 +1,22 @@
 .card-root {
   text-align: center;
   padding-bottom: 15px;
+  height: 100%;
 }
 .title {
   font-size: 20px;
   margin-top: 15px;
+  font-weight: bold;
 }
 .subtitle {
   text-align: center;
-  padding: 5px;
-  margin: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.icon {
+  width: 30px;
+}
+.itemTitle {
+  font-weight: bold;
 }

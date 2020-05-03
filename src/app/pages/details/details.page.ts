@@ -2,6 +2,7 @@ import { Observable } from "rxjs";
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { Product } from "src/app/models/product";
+import { Location } from "@angular/common";
 
 @Component({
   selector: "app-details",
@@ -16,7 +17,15 @@ export class DetailsPage implements OnInit {
     let value = parseFloat(price);
     return value * 1.21;
   }
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  previous() {
+    this._location.back();
+  }
+
+  constructor(
+    private route: ActivatedRoute,
+    private _location: Location,
+    private router: Router
+  ) {}
   ngOnInit() {
     if (this.route.snapshot.data["product"]) {
       this.product = this.route.snapshot.data["product"];

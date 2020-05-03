@@ -19,6 +19,17 @@ export class ProductService {
     );
   }
 
+  getDeals(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.url).pipe(
+      map((res) => {
+        return res.filter(
+          (item) => item.dealPrice !== " " && item.dealPrice !== undefined
+        );
+      }),
+      catchError(this.handleError)
+    );
+  }
+
   getProductById(id): Observable<Product> {
     return this.http
       .get<Product>(`${this.url}/${id}`)

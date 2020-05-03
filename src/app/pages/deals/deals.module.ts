@@ -1,3 +1,4 @@
+import { SharedModule } from "./../../SharedModule";
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
@@ -8,7 +9,13 @@ import { DealsPageRoutingModule } from "./deals-routing.module";
 import { DealsPage } from "./deals.page";
 
 @NgModule({
-  imports: [CommonModule, FormsModule, IonicModule, DealsPageRoutingModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    DealsPageRoutingModule,
+    SharedModule,
+  ],
   declarations: [DealsPage],
 })
 export class DealsPageModule {}

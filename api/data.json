@@ -1,66 +1,5 @@
 {
-  "cart": [
-    {
-      "id": 1,
-      "name": "Tasty Concrete Mouse",
-      "description": "Repellat et quaerat ratione molestiae aut maxime omnis modi. Labore ut magnam ut qui. Nihil expedita quasi culpa voluptas modi est accusantium voluptatem. Sapiente nostrum sint aut. Amet ut at. Veritatis sunt est explicabo et aliquid dolores impedit.",
-      "longDescription": "Cupiditate et voluptatum asperiores eos consequatur quis qui. Tempore et voluptate aliquid placeat. Qui unde qui soluta ut ut. Laudantium repellat ipsam molestiae sunt molestiae dolorum est iure.\n \rOfficia ipsam ipsam cumque. Rem sapiente qui. At voluptatem dolores. Esse omnis quam nam deserunt voluptatem accusamus aspernatur.\n \rRerum mollitia exercitationem qui qui. Fugit voluptas ducimus. Et inventore enim aut esse.",
-      "color": "fuchsia",
-      "material": "Plastic",
-      "price": "216.00",
-      "imageUrl": "https://source.unsplash.com/1600x900/?product&sig=1",
-      "quantity": 8208,
-      "createdAt": 1588415361117
-    },
-    {
-      "id": 2,
-      "name": "Refined Rubber Towels",
-      "description": "Ut placeat assumenda repellat hic enim est quia eaque. Nemo consequuntur tempora. Iste harum ipsa fuga. Fugit quo error facere sunt maxime sit consectetur. Voluptatem perspiciatis deleniti blanditiis rerum quibusdam id quia aut.",
-      "longDescription": "Ut et blanditiis. Voluptas sequi corrupti incidunt ab. Aliquid error omnis rerum. Et et quidem beatae molestias repellat esse. Voluptatem dolore corporis impedit aut quia eum corrupti tempora ut.\n \rEsse tempora adipisci. Fugiat laudantium voluptas. Optio ex eos quaerat. Totam labore sit nam odit adipisci voluptatem suscipit. Nemo quia earum omnis officiis harum sed odit aut.\n \rDucimus eos explicabo quod eos. Qui sapiente sed neque facere animi pariatur. Minus magnam necessitatibus. Ea at impedit. Maxime qui neque fuga.",
-      "color": "lavender",
-      "material": "Concrete",
-      "price": "482.00",
-      "imageUrl": "https://source.unsplash.com/1600x900/?product&sig=2",
-      "quantity": 29427,
-      "createdAt": 1588422379901
-    },
-    {
-      "id": 6,
-      "name": "Licensed Steel Bacon",
-      "description": "Sed ut dolore. Omnis non distinctio nihil in et quod. Dolores illum omnis impedit corporis aut optio veniam. Iusto amet dolor dolorum voluptates qui accusantium ut.",
-      "longDescription": "Sunt nostrum voluptas exercitationem. Ut delectus quisquam laudantium nulla error dolorem. Porro autem reprehenderit ea velit aut a. Aliquid necessitatibus est vitae magni.\n \rTenetur temporibus accusamus minima mollitia temporibus ipsum non. Omnis vitae vitae dolore similique. Et aspernatur aut et. Ea rerum aut itaque consequatur voluptatem animi deleniti distinctio. Vero distinctio eos non repellat magnam inventore placeat. Tempore eveniet consequatur id quo et eos.\n \rEius mollitia consequatur ducimus aliquam consectetur dolores nesciunt ut nam. Quod eum dolorum odio non accusantium debitis eveniet ex. Labore consectetur et ex. Cum repellat et.",
-      "color": "indigo",
-      "material": "Steel",
-      "price": "873.00",
-      "imageUrl": "https://source.unsplash.com/1600x900/?product&sig=6",
-      "quantity": 11065,
-      "createdAt": 1588426973003
-    },
-    {
-      "id": 7,
-      "name": "Generic Steel Bike",
-      "description": "Id sed sed. Quia culpa rem. Enim ipsa quia ipsam dolorem qui non quo quo commodi. Sint non quidem vitae ut maxime at eos. Ipsa blanditiis reprehenderit qui cupiditate cum modi et aut. Consequatur enim dolores ut.",
-      "longDescription": "Natus numquam ut quaerat voluptatem. Rerum explicabo similique rem. Porro voluptas esse enim quia saepe fugiat laudantium et. Inventore dignissimos dolorum et. Quo est maiores molestiae dolore quasi.\n \rIusto quas voluptatem. Ducimus odit iusto laboriosam labore. Sed quia qui velit quidem natus officia reiciendis eius ab. Eum accusamus dolor. Doloribus beatae sit sapiente inventore quia ut.\n \rNatus deleniti eligendi. Voluptatem rerum molestiae veniam. Velit officia itaque nihil rerum eos. Dolorem in est dignissimos cumque velit ipsam consequatur non. Voluptatem sint veritatis hic explicabo aspernatur aut sit. Voluptas magnam et placeat culpa.",
-      "color": "teal",
-      "material": "Metal",
-      "price": "775.00",
-      "imageUrl": "https://source.unsplash.com/1600x900/?product&sig=7",
-      "quantity": 62731,
-      "createdAt": 1588426975048
-    },
-    {
-      "id": 8,
-      "name": "Unbranded Steel Ball",
-      "description": "Unde ullam rem ea aut tempore earum. Non cumque voluptatibus voluptatem sunt quos autem consequatur. Qui ullam fuga numquam qui accusamus dolorem.",
-      "longDescription": "Ut adipisci unde nihil et ea provident aut. Et possimus voluptatibus maiores pariatur ab est temporibus quia. Sit assumenda eveniet. Aut voluptatum rerum et sed quia. Voluptatum magnam omnis ipsam culpa ipsum sunt sed fugit delectus.\n \rMagnam molestiae voluptas. Ut est et aut et voluptatem autem suscipit sed. Porro vero quo. Ipsa qui voluptates cumque ut et odit numquam velit. Sint qui ad repellat porro accusantium et explicabo laborum quibusdam.\n \rAut eum est ipsa rerum eos sapiente. Libero sequi sed voluptatem quidem veritatis. Dolores eligendi dolor qui.",
-      "color": "pink",
-      "material": "Frozen",
-      "price": "235.00",
-      "imageUrl": "https://source.unsplash.com/1600x900/?product&sig=8",
-      "quantity": 26777,
-      "createdAt": 1588426976667
-    }
-  ],
+  "cart": [],
   "products": [
     {
       "id": 1,
@@ -114,6 +53,7 @@
       "color": "red",
       "material": "Concrete",
       "price": "500.00",
+      "dealPrice": "420.23",
       "imageUrl": "https://source.unsplash.com/1600x900/?product&sig=5",
       "quantity": 13946
     },

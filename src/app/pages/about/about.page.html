@@ -10,7 +10,9 @@
 <ion-content>
   <ion-card class="card-root">
     <ion-card-header>
-      <ion-card-subtitle>E-commerce sample application</ion-card-subtitle>
+      <ion-card-subtitle class="subtitle"
+        >E-commerce sample application</ion-card-subtitle
+      >
       <ion-card-title class="title"
         >This is a proof of concept created with Ionic and used for my
         internship research</ion-card-title
@@ -18,16 +20,16 @@
     </ion-card-header>
     <ion-card-content>
       <ion-list>
-        <ion-list-header class="subtitle">
-          Technologies used
+        <ion-list-header>
+          <ion-label class="subtitle"> Technologies used </ion-label>
         </ion-list-header>
 
         <ion-item>
           <ion-avatar slot="start">
-            <ion-icon name="logo-angular"></ion-icon>
+            <ion-icon size="large" name="logo-angular"></ion-icon>
           </ion-avatar>
           <ion-label>
-            <h2>Angular Framework</h2>
+            <h2 class="itemTitle">Angular Framework</h2>
             <h3>https://angular.io/</h3>
             <p>
               Angular is an app-design framework and development platform for
@@ -38,10 +40,10 @@
 
         <ion-item>
           <ion-avatar slot="start">
-            <ion-icon name="logo-ionic"></ion-icon>
+            <ion-icon size="large" name="logo-ionic"></ion-icon>
           </ion-avatar>
           <ion-label>
-            <h2>Ionic Framework</h2>
+            <h2 class="itemTitle">Ionic Framework</h2>
             <h3>https://ionicframework.com/</h3>
             <p>
               Free and open source, Ionic offers a library of mobile-optimized
@@ -53,10 +55,10 @@
 
         <ion-item>
           <ion-avatar slot="start">
-            <ion-icon name="logo-nodejs"></ion-icon>
+            <ion-icon size="large" name="logo-nodejs"></ion-icon>
           </ion-avatar>
           <ion-label>
-            <h2>Node JS</h2>
+            <h2 class="itemTitle">Node JS</h2>
             <h3>https://nodejs.org/en/</h3>
             <p>
               Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript

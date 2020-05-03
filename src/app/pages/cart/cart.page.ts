@@ -1,3 +1,4 @@
+import { Router } from "@angular/router";
 import { Product } from "./../../models/product";
 import { CheckCartItemService } from "./../../services/check-cart-item.service";
 import { NotifyService } from "./../../services/notify.service";
@@ -16,7 +17,8 @@ export class CartPage implements OnInit {
   constructor(
     private cartService: CartService,
     private notifyService: NotifyService,
-    private checkCartItemService: CheckCartItemService
+    private checkCartItemService: CheckCartItemService,
+    private router: Router
   ) {}
 
   fetchList() {
@@ -31,6 +33,10 @@ export class CartPage implements OnInit {
       this.notifyService.notifyCart();
       this.checkCartItemService.deleteCartItem(product);
     });
+  }
+
+  onDetails(product: Product) {
+    this.router.navigate(["/menu/home/tabMain/details/" + product.id]);
   }
 
   ngOnInit() {

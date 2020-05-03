@@ -26,3 +26,15 @@
 .root {
   margin: 10px;
 }
+
+.oldPrice {
+  text-decoration: line-through;
+  color: red;
+  font-size: 17px;
+}
+
+.newPrice {
+  color: green;
+  font-weight: bold;
+  font-size: 18px;
+}

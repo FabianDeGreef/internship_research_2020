@@ -1,11 +1,17 @@
-<ion-card>
+<ion-card class="card">
   <img [src]="product.imageUrl" />
   <ion-card-header>
     <ion-card-title>Name: {{ product.name }}</ion-card-title>
   </ion-card-header>
   <ion-card-content> Description: {{ product.description }} </ion-card-content>
   <ion-card-content>
-    <div>Price: €{{ product.price }}</div>
+    <div class="price" [class.oldPrice]="product.dealPrice !== undefined">
+      Price: €{{ product.price }}
+    </div>
+    <div class="newPrice" *ngIf="product.dealPrice !== undefined">
+      Deal Price: €{{ product.dealPrice }}
+    </div>
+
     <div class="buttonContainer">
       <ion-button (click)="onBuy(product)" color="primary"
         >Add to cart</ion-button

@@ -1,3 +1,9 @@
+.buttonContainer {
+  margin: 10px;
+}
+.button {
+  font-size: 20px;
+}
 ion-content {
   ion-col {
     display: flex;
@@ -5,15 +11,14 @@ ion-content {
 }
 ion-card {
   img {
-    width: 85%;
+    width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 5 !important;
   }
   ion-card-content {
     padding: 5 !important;
-    min-height: 155px;
+    min-height: 100px;
     ion-card-title {
       padding-top: 1.5rem !important;
       padding-bottom: 1.5rem !important;

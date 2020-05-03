@@ -1,3 +1,4 @@
+import { ProductService } from "./../../services/product.service";
 import { NotifyService } from "./../../services/notify.service";
 import { CartService } from "./../../services/cart.service";
 import { Component, OnInit } from "@angular/core";
@@ -9,9 +10,11 @@ import { Component, OnInit } from "@angular/core";
 })
 export class HomePage implements OnInit {
   cartCount: Number;
+  dealsCount: Number;
 
   constructor(
     private cartService: CartService,
+    private productService: ProductService,
     private notifyService: NotifyService
   ) {}
 
@@ -22,11 +25,18 @@ export class HomePage implements OnInit {
       }
     });
     this.getCartCount();
+    this.getDealsCount();
   }
 
   getCartCount() {
     this.cartService.getProducts().subscribe((data) => {
       this.cartCount = data.length;
+    });
+  }
+
+  getDealsCount() {
+    this.productService.getDeals().subscribe((data) => {
+      this.dealsCount = data.length;
     });
   }
 }
