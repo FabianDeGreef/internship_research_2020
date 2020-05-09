@@ -11,12 +11,6 @@ server.use(middleWares);
 
 server.use(jsonServer.bodyParser);
 
-// Simulate delay on all requests
-server.use(function (req, res, next) {
-  setTimeout(next, 0);
-});
-
-// Add createdAt to all POSTS
 server.use((req, res, next) => {
   if (req.method === "POST") {
     req.body.createdAt = Date.now();
@@ -44,7 +38,7 @@ server.post("/cart/", function (req, res, next) {
 
 server.use(router);
 
-const port = 3000;
+const port = process.env.PORT || 3001;
 server.listen(port, () => {
   console.log(`JSON Server is running on port ${port}`);
 });

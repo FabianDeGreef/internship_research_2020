@@ -8,7 +8,7 @@ import { Product } from "../models/product";
   providedIn: "root",
 })
 export class CartService {
-  url: string = "http://192.168.1.113:3000/cart";
+  url: string = "https://ion-research-dev-2020-backend.herokuapp.com/cart";
 
   constructor(private http: HttpClient) {}
 
