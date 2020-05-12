@@ -1,6 +1,7 @@
-var express = require("express");
-var path = require("path");
-var app = express();
+const express = require("express");
+const path = require("path");
+const app = express();
+const compression = require("compression");
 
 app.all("*", function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -17,6 +18,11 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
+app.get("/ngsw-worker.js", (req, res) => {
+  res.sendFile(path.resolve(__dirname + "/www/ngsw-worker.js"));
+});
+
+app.use(compression());
 app.use(express.static(path.resolve(__dirname, "www")));
 
 app.get("/*", function (req, res) {

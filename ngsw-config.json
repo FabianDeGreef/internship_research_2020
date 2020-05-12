@@ -4,7 +4,7 @@
   "dataGroups": [
     {
       "name": "api-performance",
-      "urls": ["/", "/assets/**", "/svg/**"],
+      "urls": ["/"],
       "cacheConfig": {
         "strategy": "performance",
         "maxSize": 100,
