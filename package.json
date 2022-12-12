@@ -32,7 +32,7 @@
     "@ionic/angular": "^5.0.0",
     "core-js": "^2.5.4",
     "cross-env": "7.0.2",
-    "express": "4.17.1",
+    "express": "4.17.3",
     "faker": "^4.1.0",
     "firebase": "^7.14.2",
     "json-server": "^0.16.1",
